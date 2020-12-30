@@ -9,7 +9,6 @@
 LOGO⅃ is an AI logo generator that aims creating large amount of quality logos within seconds and providing alternative solutions for advertising as well as creative industries. Through using LLD dataset provided for establishing the prototype of different GAN models in the early stage of our project for trial purposes to see the differences among the GANs while later obtaining over 365k logos from App Store to training our final DCGAN model, we have suceeded in creating an user-friendly and instant logo generator through deep learning model.
 
 
-
 ## Data Collection
 
 #### - LLD Large Logo Dataset
@@ -23,16 +22,32 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 
 #### - 365k IOS Apps Dataset
 
-<a href="https://www.kaggle.com/fentyforte/365k-ios-apps-dataset">365k IOS Apps Dataset</a> [2] is created by us using Rapid API to acquire the data we need and we have scraped over 10,000,000 but we have filtered out the data rows with incomplete information so there are only 365k data left. We have used 5 Jupyter Notebooks at the same time to scrape thus download the logos which took us around 2 days using the Macbook Pro (specification mentioned below).
+<a href="https://www.kaggle.com/fentyforte/365k-ios-apps-dataset">365k IOS Apps Dataset</a> [2] is created by us using Rapid API to acquire the data we need and we have scraped over 10,000,000 data but we have filtered out the data rows with incomplete information so there are only 365k data left. We have used 5 Jupyter Notebooks at the same time to scrape thus download the logos which took us around 2 days using the Macbook Pro (specification mentioned below).
 
 ## Model Architectural Diagram
 
 <p align="center">
-  <img src="model_architecture.png">
+  <img src="img/model_architecture.png">
 </p>
 
 
 ## Results 
+### Uncategorized 120k dataset
+### Games Category
+
+<table>
+  <tr>
+    <th>Training Images</th>
+    <th>DCGAN 140th Epoch</th>
+  </tr>
+  <tr>
+    <th><img src="img/game_training.png"></th>
+    <th><img src="img/game_result.png"></th>
+  </tr>
+  
+</table>
+
+Part of the process of training DCGAN:<br>
 
 <table>
   <tr>
@@ -40,11 +55,23 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
     <th>DCGAN with 58k img (Games Category)</th>
   </tr>
   <tr>
-    <th><img src="120k.gif"></th>
-    <th><img src="dcgan_game.gif"></th>
+    <th><img src="img/120k.gif"></th>
+    <th><img src="img/dcgan_game.gif"></th>
   </tr>
   
 </table>
+
+Although we have trained the DCGAN model with 100-200 epochs, we only need the best performing generator among the 100 epoch in which we have chosen the 72th epoch's generator for 120k dataset and 
+
+
+
+## **The Loss of Generator and Discriminator with 120k Dataset**
+
+
+<p align="center">
+  <img src="img/120k_loss.png">
+</p>
+
 
 ### Specifications & Time 
 <br>
@@ -77,6 +104,19 @@ The following are the specifications of computer/VM instances & time used for tr
 
 
 ## Limitations
+### 1. Mode Collapse
+Training could fall into mode collapse
+Generator is only capable of generating a small subset of different outcomes
+
+
+<table>
+
+  <tr>
+    <th><img src="img/failed1.png"></th>
+    <th><img src="img/failed2.png"></th>
+  </tr>
+  
+</table>
 
 
 ## Pitch
@@ -85,6 +125,6 @@ The following are the specifications of computer/VM instances & time used for tr
 ## References
 1. LLD Dataset - https://data.vision.ee.ethz.ch/cvl/lld/
 2. 365k IOS Apps Dataset - https://www.kaggle.com/fentyforte/365k-ios-apps-dataset
-3. 365k IOS Apps Logos Dataset - 
+3. 365k IOS Apps Logos Dataset - https://www.kaggle.com/fentyforte/365k-ios-apps-categorized-logos
 
 https://medium.com/analytics-vidhya/conditional-icon-generation-with-gans-2cc489e23d9a
