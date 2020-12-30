@@ -1,7 +1,7 @@
 # AI Logo Generator Using DCGAN
 
 <p align="center">
-  <img width="267" height="317" src="logol.png">
+  <img width="267" height="317" src="img/logol.png">
 </p>
 
 
