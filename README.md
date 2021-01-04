@@ -149,5 +149,3 @@ The model parameters oscillate, destabilize and never converge.
 - Computer Vision Model Engineering & Evaluation
 - Cloud Deployment
 
-## Presentation:
-present.pptx
