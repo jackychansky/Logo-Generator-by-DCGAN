@@ -32,7 +32,7 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 
 
 ## Results 
-### Uncategorized 120k dataset
+
 ### Games Category
 
 <table align="center">
@@ -47,7 +47,7 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
   
 </table>
 
-Part of the process of training DCGAN:<br>
+### Uncategorized 120k dataset
 
 <table align="center">
   <tr>
