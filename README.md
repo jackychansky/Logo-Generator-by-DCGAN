@@ -61,7 +61,7 @@ Part of the process of training DCGAN:<br>
   
 </table>
 
----Although we have trained the DCGAN model with 100-200 epochs, we only need the best performing generator among the 100 epoch in which we have chosen the 72th epoch's generator for 120k dataset and 60th epoch for game category of logos.
+--- Although we have trained the DCGAN model with 100-200 epochs, we only need the best performing generator among the 100 epoch in which we have chosen the 72th epoch's generator for 120k dataset and 60th epoch for game category of logos.
 
 
 
@@ -99,10 +99,6 @@ The following are the specifications of computer/VM instances & time used for tr
 1000 iterations: ~**233** seconds <br><br>
 
 
-
-#### DCGAN
-
-
 ## Limitations
 
 ### 1. Mode Collapse
@@ -126,7 +122,10 @@ The model parameters oscillate, destabilize and never converge.
 
 
 ## Pitch
--------show pitch here rmb edit arr on9999--------
+
+<p align="center">
+  <img src="img/pitch.png">
+</p>
 
 ## References
 1. LLD Dataset - https://data.vision.ee.ethz.ch/cvl/lld/
