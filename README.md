@@ -35,7 +35,7 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 ### Uncategorized 120k dataset
 ### Games Category
 
-<table>
+<table align="center">
   <tr>
     <th>Training Images</th>
     <th>DCGAN 140th Epoch</th>
@@ -49,7 +49,7 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 
 Part of the process of training DCGAN:<br>
 
-<table>
+<table align="center">
   <tr>
     <th>DCGAN with 120k img</th>
     <th>DCGAN with 58k img (Games Category)</th>
@@ -104,7 +104,7 @@ The following are the specifications of computer/VM instances & time used for tr
 ### 1. Mode Collapse
 Training could fall into mode collapse where the Generator collaspsed and is only capable of generating a small subset of different outcomes
 
-<table>
+<table align="center">
 
   <tr>
     <th><img src="img/failed1.png"></th>
@@ -133,3 +133,21 @@ The model parameters oscillate, destabilize and never converge.
 3. 365k IOS Apps Logos Dataset - https://www.kaggle.com/fentyforte/365k-ios-apps-categorized-logos
 4. https://medium.com/analytics-vidhya/conditional-icon-generation-with-gans-2cc489e23d9a
 5. Jason Brownlee - Generative Adversarial Networks with Python (2020) - https://machinelearningmastery.com/
+
+
+## Team Members:
+
+**Darren Cheng**
+- Frontend & Backend Web Development
+- Cloud Deployment
+
+**Gemma Lai**
+- Image Collection & Preprocessing
+- Computer Vision Model Engineering
+
+**Jacky Chan**
+- Computer Vision Model Engineering & Evaluation
+- Cloud Deployment
+
+## Presentation:
+present.pptx
