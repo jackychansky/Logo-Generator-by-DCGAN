@@ -32,13 +32,26 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 
 
 ## Results 
+
 ### Uncategorized 120k dataset
+<table align="center">
+  <tr>
+    <th>Training Images</th>
+    <th>DCGAN 72th Epoch</th>
+  </tr>
+  <tr>
+    <th><img src="img/dcgan120k_training.png"></th>
+    <th><img src="img/dcgan120k_result.png"></th>
+  </tr>
+  
+</table>
+
 ### Games Category
 
 <table align="center">
   <tr>
     <th>Training Images</th>
-    <th>DCGAN 140th Epoch</th>
+    <th>DCGAN 141th Epoch</th>
   </tr>
   <tr>
     <th><img src="img/game_training.png"></th>
@@ -47,7 +60,7 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
   
 </table>
 
-Part of the process of training DCGAN:<br>
+### Training Processes
 
 <table align="center">
   <tr>
