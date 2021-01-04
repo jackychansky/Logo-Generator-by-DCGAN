@@ -61,7 +61,7 @@ Part of the process of training DCGAN:<br>
   
 </table>
 
-Although we have trained the DCGAN model with 100-200 epochs, we only need the best performing generator among the 100 epoch in which we have chosen the 72th epoch's generator for 120k dataset and 
+---Although we have trained the DCGAN model with 100-200 epochs, we only need the best performing generator among the 100 epoch in which we have chosen the 72th epoch's generator for 120k dataset and 60th epoch for game category of logos.
 
 
 
@@ -69,13 +69,13 @@ Although we have trained the DCGAN model with 100-200 epochs, we only need the b
 
 
 <p align="center">
-  <img src="img/120k_loss.png">
+  <img src="img/loss.png">
 </p>
 
 
-### Specifications & Time 
+## Specifications & Time 
 <br>
-We have scaled down 365,915 images from 512x512 pixels to 64x64 pixels for training our DCGAN model due to our limited computational power and financial status.<br>
+We have scaled down 365,915 images from 512x512 pixels to 64x64 pixels for training our DCGAN model due to our limited computational power and financial status.<br><br>
 The following are the specifications of computer/VM instances & time used for training DCGAN:<br><br><br>
 
 ### **MacBook Pro** <br><br>
@@ -104,10 +104,9 @@ The following are the specifications of computer/VM instances & time used for tr
 
 
 ## Limitations
-### 1. Mode Collapse
-Training could fall into mode collapse
-Generator is only capable of generating a small subset of different outcomes
 
+### 1. Mode Collapse
+Training could fall into mode collapse where the Generator collaspsed and is only capable of generating a small subset of different outcomes
 
 <table>
 
@@ -118,6 +117,13 @@ Generator is only capable of generating a small subset of different outcomes
   
 </table>
 
+### 2. Non-convergence
+The model parameters oscillate, destabilize and never converge.
+
+<p align="center">
+  <img src="img/non-converge.gif">
+</p>
+
 
 ## Pitch
 -------show pitch here rmb edit arr on9999--------
@@ -126,5 +132,5 @@ Generator is only capable of generating a small subset of different outcomes
 1. LLD Dataset - https://data.vision.ee.ethz.ch/cvl/lld/
 2. 365k IOS Apps Dataset - https://www.kaggle.com/fentyforte/365k-ios-apps-dataset
 3. 365k IOS Apps Logos Dataset - https://www.kaggle.com/fentyforte/365k-ios-apps-categorized-logos
-
-https://medium.com/analytics-vidhya/conditional-icon-generation-with-gans-2cc489e23d9a
+4. https://medium.com/analytics-vidhya/conditional-icon-generation-with-gans-2cc489e23d9a
+5. Jason Brownlee - Generative Adversarial Networks with Python (2020) - https://machinelearningmastery.com/
