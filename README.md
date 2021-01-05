@@ -111,6 +111,7 @@ The following are the specifications of computer/VM instances & time used for tr
 1 epoch/2858 iterations: ~**666** seconds <br>
 1000 iterations: ~**233** seconds <br><br>
 
+The entire project took us around **1 month** to finish.
 
 ## Limitations
 
