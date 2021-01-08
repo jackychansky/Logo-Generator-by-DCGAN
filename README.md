@@ -5,11 +5,65 @@
 </p>
 
 
-## LOGOL - Xccelerate Data Science and Machine Learning Capstone Project
+## LOGOL - Xccelerate Data Science and Machine Learning Capstone Project <a name="intro"></a>
 LOGO⅃ is an AI logo generator that aims creating large amount of quality logos within seconds and providing alternative solutions for advertising as well as creative industries. Through using LLD dataset provided for establishing the prototype of different GAN models in the early stage of our project for trial purposes to see the differences among the GANs while later obtaining over 365k logos from App Store to training our final DCGAN model, we have suceeded in creating an user-friendly and instant logo generator through deep learning model.
 
 
-## Data Collection
+## Table of Content
+<ol>
+
+
+<li> <a href="#intro">Introduction</a> </li>
+<li> <a href="#datacollection">Data Collection</a> </li>
+
+  <ol> 
+  <li> <a href="#lld">LLD Large Logo Dataset</a> </li>
+  <li> <a href="#ios">365k IOS Apps Dataset</a> </li>
+  </ol>
+  
+<li> <a href="#results">Results</a> </li>
+
+  <ol> 
+  <li> <a href="#120k">Uncategorized 120k dataset</a> </li> 
+  <li> <a href="#gc">Games Category</a> </li> 
+  <li> <a href="#tp">Training Processes</a></li> 
+  <li> <a href="#dd">Deployment</a> </li> 
+  </ol>
+  
+<li><a href="#loss"> The Loss of Generator and Discriminator with 120k Dataset</a> </li> 
+<li> <a href="#spec">Specifications & Time</a> </li> 
+  <ol>
+  <li> <a href="#mac">MacBook Pro</a> </li> 
+  <li> <a href="#gcp">GCP AI VM Instances</a></li> 
+  </ol>
+  
+<li> <a href="#limit">Limitations</a> </li> 
+
+  <ol>
+  <li><a href="#mc"> Mode Collapse </a></li> 
+  <li><a href="#nc"> Non-convergence <a> </li> 
+  </ol>
+  
+<li> <a href="#pitch">Pitch</a></li> 
+<li> <a href="#references">References</a></li> 
+<li> <a href="#team">Team Members</a></li> 
+
+</ol>
+
+
+<a name="datacollection"></a>
+<a name="lld"></a>
+<a name="ios"></a>
+<a name="results"></a>
+<a name="spec"></a>
+<a name="limit"></a>
+<a name="pitch"></a>
+<a name="references"></a>
+<a name="team"></a>
+
+
+## Data Collection <a name="datacollection"></a>
+
 
 #### - LLD Large Logo Dataset
 
@@ -76,6 +130,9 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 
 --- Although we have trained the DCGAN model with 100-200 epochs, we only need the best performing generator among the 100 epoch in which we have chosen the 72th epoch's generator for 120k dataset and 60th epoch for game category of logos.
 
+### Deployment
+
+#insert gif here
 
 
 ## **The Loss of Generator and Discriminator with 120k Dataset**
