@@ -5,13 +5,58 @@
 </p>
 
 
-## LOGOL - Xccelerate Data Science and Machine Learning Capstone Project
+## LOGOL - Xccelerate Data Science and Machine Learning Capstone Project <a name="intro"></a>
 LOGO⅃ is an AI logo generator that aims creating large amount of quality logos within seconds and providing alternative solutions for advertising as well as creative industries. Through using LLD dataset provided for establishing the prototype of different GAN models in the early stage of our project for trial purposes to see the differences among the GANs while later obtaining over 365k logos from App Store to training our final DCGAN model, we have suceeded in creating an user-friendly and instant logo generator through deep learning model.
 
 
-## Data Collection
+## Table of Content
+<ol>
 
-#### - LLD Large Logo Dataset
+
+<li> <a href="#intro">Introduction</a> </li>
+<li> <a href="#datacollection">Data Collection</a> </li>
+
+  <ol> 
+  <li> <a href="#lld">LLD Large Logo Dataset</a> </li>
+  <li> <a href="#ios">365k IOS Apps Dataset</a> </li>
+  </ol>
+  
+<li> <a href="#results">Results</a> </li>
+
+  <ol> 
+  <li> <a href="#120k">Uncategorized 120k dataset</a> </li> 
+  <li> <a href="#gc">Games Category</a> </li> 
+  <li> <a href="#tp">Training Processes</a></li> 
+  <li> <a href="#dd">Deployment</a> </li> 
+  </ol>
+  
+<li><a href="#loss"> The Loss of Generator and Discriminator with 120k Dataset</a> </li> 
+<li> <a href="#spec">Specifications & Time</a> </li> 
+  <ol>
+  <li> <a href="#mac">MacBook Pro</a> </li> 
+  <li> <a href="#gcp">GCP AI VM Instances</a></li> 
+  </ol>
+  
+<li> <a href="#limit">Limitations</a> </li> 
+
+  <ol>
+  <li><a href="#mc"> Mode Collapse </a></li> 
+  <li><a href="#nc"> Non-convergence <a> </li> 
+  </ol>
+  
+<li> <a href="#pitch">Pitch</a></li> 
+<li> <a href="#references">References</a></li> 
+<li> <a href="#team">Team Members</a></li> 
+
+</ol>
+
+
+
+## Data Collection <a name="datacollection"></a>
+
+
+#### - LLD Large Logo Dataset<a name="lld"></a>
+
 
 <a href="https://data.vision.ee.ethz.ch/cvl/lld/">LLD dataset</a> [1] contains various logo dataset with different amount and resolution of logo in which we have chosen two of the datasets provided:
 
@@ -20,7 +65,8 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 2.   **122,920** logos with high resolution (400x400)
 
 
-#### - 365k IOS Apps Dataset
+#### - 365k IOS Apps Dataset<a name="ios"></a>
+
 
 <a href="https://www.kaggle.com/fentyforte/365k-ios-apps-dataset">365k IOS Apps Dataset</a> [2] is created by us using Rapid API to acquire the data we need and we have scraped over 10,000,000 data but we have filtered out the data rows with incomplete information so there are only 365k data left. We have used 5 Jupyter Notebooks at the same time to scrape thus download the logos which took us around 2 days using the Macbook Pro (specification mentioned below).
 
@@ -31,9 +77,11 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 </p>
 
 
-## Results 
+## Results <a name="results"></a>
 
-### Uncategorized 120k dataset
+
+### Uncategorized 120k dataset<a name="120k"></a>
+
 <table align="center">
   <tr>
     <th>Training Images</th>
@@ -46,7 +94,8 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
   
 </table>
 
-### Games Category
+### Games Category<a name="gc"></a>
+
 
 <table align="center">
   <tr>
@@ -60,7 +109,8 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
   
 </table>
 
-### Training Processes
+### Training Processes<a name="tp"></a>
+
 
 <table align="center">
   <tr>
@@ -76,9 +126,14 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 
 --- Although we have trained the DCGAN model with 100-200 epochs, we only need the best performing generator among the 100 epoch in which we have chosen the 72th epoch's generator for 120k dataset and 60th epoch for game category of logos.
 
+### Deployment<a name="dd"></a>
 
 
-## **The Loss of Generator and Discriminator with 120k Dataset**
+#insert gif here
+
+
+## **The Loss of Generator and Discriminator with 120k Dataset**<a name="loss"></a>
+
 
 
 <p align="center">
@@ -86,12 +141,14 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 </p>
 
 
-## Specifications & Time 
+## Specifications & Time <a name="spec"></a>
+
 <br>
 We have scaled down 365,915 images from 512x512 pixels to 64x64 pixels for training our DCGAN model due to our limited computational power and financial status.<br><br>
 The following are the specifications of computer/VM instances & time used for training DCGAN:<br><br><br>
 
-### **MacBook Pro** <br><br>
+### **MacBook Pro** <br><br><a name="mac"></a>
+
 **CPU**: 2.3GHz 8-Cppre Intel Core i9 <br>
 **RAM**: 32 GM 2667 MHz DDR4 <br>
 **Graphic Card**: Intel UHD Graphics 630 1536MB <br><br>
@@ -101,7 +158,8 @@ The following are the specifications of computer/VM instances & time used for tr
 1 epoch/961 iterations: ~**3800-4200** seconds <br>
 1000 iterations: ~**4200-4400** seconds <br><br>
 
-### **GCP AI VM Instances** <br><br>
+### **GCP AI VM Instances** <br><br><a name="gcp"></a>
+
 **Environment**: PyTorch 1.6 <br>
 **Machine Type**: 4 vCPUs, 15 GB RAM <br>
 **GPUs**: NVIDIA Tesla T4 x 1 <br>
@@ -113,9 +171,11 @@ The following are the specifications of computer/VM instances & time used for tr
 
 The entire project took us around **1 month** to finish.
 
-## Limitations
+## Limitations<a name="limit"></a>
 
-### 1. Mode Collapse
+### 1. Mode Collapse<a name="mc"></a>
+
+
 Training could fall into mode collapse where the Generator collaspsed and is only capable of generating a small subset of different outcomes
 
 <table align="center">
@@ -127,7 +187,8 @@ Training could fall into mode collapse where the Generator collaspsed and is onl
   
 </table>
 
-### 2. Non-convergence
+### 2. Non-convergence<a name="nc"></a>
+
 The model parameters oscillate, destabilize and never converge.
 
 <p align="center">
@@ -135,13 +196,15 @@ The model parameters oscillate, destabilize and never converge.
 </p>
 
 
-## Pitch
+## Pitch<a name="pitch"></a>
+
 
 <p align="center">
   <img src="img/pitch.png">
 </p>
 
-## References
+## References<a name="references"></a>
+
 1. LLD Dataset - https://data.vision.ee.ethz.ch/cvl/lld/
 2. 365k IOS Apps Dataset - https://www.kaggle.com/fentyforte/365k-ios-apps-dataset
 3. 365k IOS Apps Logos Dataset - https://www.kaggle.com/fentyforte/365k-ios-apps-categorized-logos
@@ -149,7 +212,7 @@ The model parameters oscillate, destabilize and never converge.
 5. Jason Brownlee - Generative Adversarial Networks with Python (2020) - https://machinelearningmastery.com/
 
 
-## Team Members:
+## Team Members:<a name="team"></a>
 
 **Darren Cheng**
 - Frontend & Backend Web Development
