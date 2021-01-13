@@ -129,7 +129,11 @@ LOGO⅃ is an AI logo generator that aims creating large amount of quality logos
 ### Deployment<a name="dd"></a>
 
 
-#insert gif here
+
+<p align="center">
+  <img src="img/deployment.gif">
+</p>
+
 
 
 ## **The Loss of Generator and Discriminator with 120k Dataset**<a name="loss"></a>
